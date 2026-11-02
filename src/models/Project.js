@@ -1,0 +1,2 @@
+import mongoose from 'mongoose';
+const schema=new mongoose.Schema({user:{type:mongoose.Schema.Types.ObjectId,ref:'User',required:true,index:true},name:{type:String,required:true,trim:true},client:{type:String,default:'Personal'},description:{type:String,default:''},hourlyRate:{type:Number,default:500,min:0},color:{type:String,default:'#8b7cff'},status:{type:String,enum:['active','completed','archived'],default:'active'}},{timestamps:true});export default mongoose.model('Project',schema);

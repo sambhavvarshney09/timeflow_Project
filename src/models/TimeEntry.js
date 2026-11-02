@@ -1,0 +1,2 @@
+import mongoose from 'mongoose';
+const schema=new mongoose.Schema({user:{type:mongoose.Schema.Types.ObjectId,ref:'User',required:true,index:true},project:{type:mongoose.Schema.Types.ObjectId,ref:'Project',required:true},description:{type:String,default:'Work session'},startTime:{type:Date,required:true},endTime:{type:Date,default:null},duration:{type:Number,default:0},billable:{type:Boolean,default:true}},{timestamps:true});schema.index({user:1,startTime:-1});export default mongoose.model('TimeEntry',schema);
