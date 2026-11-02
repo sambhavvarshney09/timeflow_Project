@@ -1,0 +1,1 @@
+import{Router}from'express';import protect from'../middleware/auth.js';import*as c from'../controllers/timeController.js';const r=Router();r.use(protect);r.get('/',c.listEntries);r.get('/active',c.activeTimer);r.post('/start',c.startTimer);r.post('/manual',c.createEntry);r.patch('/:id/stop',c.stopTimer);r.delete('/:id',c.deleteEntry);export default r;
