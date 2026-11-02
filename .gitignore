@@ -1,26 +1,74 @@
-# Dependencies
+```gitignore
+# ===================================
+# DEPENDENCIES
+# ===================================
 node_modules/
 client/node_modules/
 server/node_modules/
 
-# Environment variables - Never upload secrets
+# ===================================
+# ENVIRONMENT VARIABLES - NEVER PUSH
+# ===================================
 .env
 .env.*
 !.env.example
+client/.env
+client/.env.*
+!client/.env.example
+server/.env
+server/.env.*
+!server/.env.example
 
-# Build files
-client/dist/
-server/dist/
+# ===================================
+# BUILD OUTPUT
+# ===================================
 dist/
 build/
+client/dist/
+server/dist/
 
-# Logs
+# ===================================
+# LOG FILES
+# ===================================
 *.log
+logs/
 npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
 
-# System files
+# ===================================
+# CACHE
+# ===================================
+.cache/
+.parcel-cache/
+.vite/
+.eslintcache/
+
+# ===================================
+# TEST & COVERAGE
+# ===================================
+coverage/
+
+# ===================================
+# EDITOR / IDE
+# ===================================
+.vscode/
+.idea/
+*.suo
+*.swp
+*.swo
+
+# ===================================
+# OPERATING SYSTEM
+# ===================================
 .DS_Store
 Thumbs.db
+Desktop.ini
 
-# IDE
-.vscode/
+# ===================================
+# TEMPORARY FILES
+# ===================================
+*.tmp
+*.temp
+*.bak
+```
